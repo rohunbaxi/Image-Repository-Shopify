@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Repository - Electronics Store</title>
+    </head>
+    <body>
+        <h1>Repository - Electronics Store</h1>
+        <a href="/">Home</a><br>
+        <a href="/reset">Reset Store</a> <br><br>
+        <p>Sales: ${{y}}</p><br>
+        <table border = 1>
+            <thead>
+                <td>Product</td> 
+                <td>Cost</td>
+                <td>Amount</td>
+                <td>Display</td>
+                <td></td>
+            </thead>   
+            {% for i in x %}
+                <tr>
+                <td>{{i["b"]}}</td>
+                <td>{{i["d"]}}</td>
+                <td>{{i["e"]}}</td>
+                <td><img src='{{i["c"]}}' /></td>
+                <td><a href='/buy/{{i["a"]}}'>BUY!</button></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
